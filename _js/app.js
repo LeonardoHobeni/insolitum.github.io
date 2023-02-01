@@ -10,7 +10,7 @@ $(document).ready(function() {
   particlesJS.load('landing', 'assets/particles.json', function() {});
 
   // Typing Text
-  var element = document.getElementById('txt-rotate');
+  var element = document.querySelector('#txt-rotate');
   var toRotate = element.getAttribute('data-rotate');
   var period = element.getAttribute('data-period');
   setTimeout(function() {
@@ -50,7 +50,7 @@ function fadeOutPreloader(element, duration) {
       // Allow horizontal scroll
       document.documentElement.style.overflowY = 'auto';
 
-      document.getElementById('preloader').remove();
+      document.querySelector('#preloader').remove();
 
       clearInterval(interval);
     } else {
@@ -106,7 +106,7 @@ TxtRotate.prototype.tick = function() {
 };
 
 function randomizeOrder() {
-  var parent = document.getElementById('skills');
+  var parent = document.querySelector('#skills');
   var divs = parent.getElementsByTagName('div');
   var frag = document.createDocumentFragment();
 
